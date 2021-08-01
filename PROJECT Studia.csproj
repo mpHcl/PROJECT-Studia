@@ -46,14 +46,63 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="BrowseNote.cs" />
+    <Compile Include="Forms\Notes\BrowseNotes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\Notes\BrowseNotes.Designer.cs">
+      <DependentUpon>BrowseNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Notes\CreateNoteMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Notes\CreateNoteMenu.Designer.cs">
+      <DependentUpon>CreateNoteMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Notes\Notes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Notes\Notes.Designer.cs">
+      <DependentUpon>Notes.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\Shedule\Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Shedule\Schedule.Designer.cs">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ToDo\ToDo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ToDo\ToDo.Designer.cs">
+      <DependentUpon>ToDo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Notes\BrowseNotes.resx">
+      <DependentUpon>BrowseNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Notes\CreateNoteMenu.resx">
+      <DependentUpon>CreateNoteMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Notes\Notes.resx">
+      <DependentUpon>Notes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
