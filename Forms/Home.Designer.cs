@@ -1,6 +1,6 @@
 ﻿
 namespace PROJECT_Studia {
-    partial class Form1 {
+    partial class Home {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -37,7 +37,11 @@ namespace PROJECT_Studia {
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.MoveTimer = new System.Windows.Forms.Timer(this.components);
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button7 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -83,7 +87,7 @@ namespace PROJECT_Studia {
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(13, 171);
+            this.button1.Location = new System.Drawing.Point(145, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 100);
             this.button1.TabIndex = 3;
@@ -97,7 +101,7 @@ namespace PROJECT_Studia {
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(155, 171);
+            this.button2.Location = new System.Drawing.Point(3, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(136, 100);
             this.button2.TabIndex = 4;
@@ -111,7 +115,7 @@ namespace PROJECT_Studia {
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(155, 277);
+            this.button3.Location = new System.Drawing.Point(145, 109);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(136, 100);
             this.button3.TabIndex = 6;
@@ -125,7 +129,7 @@ namespace PROJECT_Studia {
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(11, 277);
+            this.button4.Location = new System.Drawing.Point(3, 109);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(136, 100);
             this.button4.TabIndex = 5;
@@ -149,51 +153,85 @@ namespace PROJECT_Studia {
             // 
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.button6.Location = new System.Drawing.Point(241, -2);
+            this.button6.Location = new System.Drawing.Point(244, -2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(30, 26);
             this.button6.TabIndex = 1;
             this.button6.Text = "_";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.MouseLeave += new System.EventHandler(this.button6_MouseLeave);
+            this.button6.MouseHover += new System.EventHandler(this.button6_MouseHover);
             // 
             // button5
             // 
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.button5.Location = new System.Drawing.Point(270, -2);
+            this.button5.Location = new System.Drawing.Point(273, -2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(30, 26);
             this.button5.TabIndex = 0;
             this.button5.Text = "X";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
+            this.button5.MouseHover += new System.EventHandler(this.button5_MouseHover);
             // 
             // MoveTimer
             // 
             this.MoveTimer.Interval = 1;
             this.MoveTimer.Tick += new System.EventHandler(this.MoveTimer_Tick);
             // 
-            // Form1
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.button2);
+            this.flowLayoutPanel1.Controls.Add(this.button1);
+            this.flowLayoutPanel1.Controls.Add(this.button4);
+            this.flowLayoutPanel1.Controls.Add(this.button3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 200);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(308, 239);
+            this.flowLayoutPanel1.TabIndex = 8;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(8, 182);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(280, 223);
+            this.flowLayoutPanel2.TabIndex = 9;
+            // 
+            // button7
+            // 
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(124, 410);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(53, 29);
+            this.button7.TabIndex = 10;
+            this.button7.Text = "HOME";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(298, 396);
+            this.ClientSize = new System.Drawing.Size(298, 446);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.flowLayoutPanel2);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "Home";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -212,6 +250,9 @@ namespace PROJECT_Studia {
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Timer MoveTimer;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Button button7;
     }
 }
 

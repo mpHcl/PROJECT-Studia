@@ -12,6 +12,7 @@ using System.Windows.Forms;
 
 namespace PROJECT_Studia {
     public partial class Notes : Form {
+        Home home;
         public Notes() {
             InitializeComponent();
             if (!Directory.Exists("notes")) {
@@ -19,44 +20,15 @@ namespace PROJECT_Studia {
             }
         }
 
+        public Notes(Home form) {
+            InitializeComponent();
+            if (!Directory.Exists("notes")) {
+                Directory.CreateDirectory("notes");
+            }
+            this.home = form;
+        }
+
         private void button5_Click(object sender, EventArgs e) {
-            this.Close();
-        }
-
-        int x;
-        int y;
-        bool firstClick = false;
-
-        private void panel1_MouseDown(object sender, MouseEventArgs e) {
-            if (e.Button == MouseButtons.Left) {
-                firstClick = true;
-                MoveTimer.Enabled = true;
-            }
-        }
-
-        private void panel1_MouseUp(object sender, MouseEventArgs e) {
-            if (e.Button == MouseButtons.Left) {
-                MoveTimer.Enabled = false;
-            }
-        }
-
-        private void MoveTimer_Tick(object sender, EventArgs e) {
-            if (firstClick) {
-                firstClick = false;
-                x = Cursor.Position.X;
-                y = Cursor.Position.Y;
-            }
-            int deltax = x - Cursor.Position.X;
-            int deltay = y - Cursor.Position.Y;
-
-            this.Location = new Point(this.Location.X - deltax, this.Location.Y - deltay);
-
-            x = Cursor.Position.X;
-            y = Cursor.Position.Y;
-        }
-
-        private void button1_Click(object sender, EventArgs e) {
-            new CreateNoteMenu().Show();
             this.Close();
         }
 
@@ -68,12 +40,15 @@ namespace PROJECT_Studia {
             string[] path = openFileDialog1.FileName.Split('\\');
             File.Copy(openFileDialog1.FileName, 
                 "notes\\" + path[path.Length - 1]);
-            Process.Start(path[path.Length - 1]);
         }
 
         private void button2_Click(object sender, EventArgs e) {
-            new BrowseNotes(Directory.GetFiles("notes\\")).ShowDialog();
-
+            var browse = new BrowseNotes(Directory.GetFiles("notes\\"));
+            browse.TopLevel = false;
+            browse.Visible = true;
+            home.Panel.Visible = true;
+            home.Panel.Controls.Clear();
+            home.Panel.Controls.Add(browse);
         }
     }
 }
