@@ -38,7 +38,7 @@ namespace PROJECT_Studia {
             //ID - unique number (int)
             //Name - text describing task
             //Time - date planned for finishing task
-            //Done - field containig data about task status (0 - unfinished, 1 - finished, 2 - past time)  
+            //Done - field containig data about task status (0 - unfinished, 1 - past time, 2 - finished)  
             var createToDoTableSQL = "CREATE TABLE todo (" +
                                         "ID INT UNIQUE PRIMARY KEY," +
                                         "name TEXT," +
@@ -166,7 +166,7 @@ namespace PROJECT_Studia {
         }
 
         private void button4_Click(object sender, EventArgs e) {
-            var todoFrom = new ToDo();
+            var todoFrom = new ToDo(this);
             todoFrom.TopLevel = false;
             todoFrom.Visible = true;
             flowLayoutPanel1.Visible = false;

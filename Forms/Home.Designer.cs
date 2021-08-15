@@ -90,7 +90,7 @@ namespace PROJECT_Studia {
             this.button1.Location = new System.Drawing.Point(145, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 100);
-            this.button1.TabIndex = 3;
+            this.button1.TabIndex = 1;
             this.button1.Text = "Schedule";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -104,7 +104,7 @@ namespace PROJECT_Studia {
             this.button2.Location = new System.Drawing.Point(3, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(136, 100);
-            this.button2.TabIndex = 4;
+            this.button2.TabIndex = 0;
             this.button2.Text = "Notes";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -118,7 +118,7 @@ namespace PROJECT_Studia {
             this.button3.Location = new System.Drawing.Point(145, 109);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(136, 100);
-            this.button3.TabIndex = 6;
+            this.button3.TabIndex = 3;
             this.button3.Text = "Settings";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -132,7 +132,7 @@ namespace PROJECT_Studia {
             this.button4.Location = new System.Drawing.Point(3, 109);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(136, 100);
-            this.button4.TabIndex = 5;
+            this.button4.TabIndex = 2;
             this.button4.Text = "To do ";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -156,7 +156,7 @@ namespace PROJECT_Studia {
             this.button6.Location = new System.Drawing.Point(244, -2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(30, 26);
-            this.button6.TabIndex = 1;
+            this.button6.TabIndex = 4;
             this.button6.Text = "_";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -170,7 +170,7 @@ namespace PROJECT_Studia {
             this.button5.Location = new System.Drawing.Point(273, -2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(30, 26);
-            this.button5.TabIndex = 0;
+            this.button5.TabIndex = 5;
             this.button5.Text = "X";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -195,7 +195,7 @@ namespace PROJECT_Studia {
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(8, 182);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(9, 186);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(280, 223);
             this.flowLayoutPanel2.TabIndex = 9;

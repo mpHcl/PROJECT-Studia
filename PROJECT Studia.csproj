@@ -96,6 +96,13 @@
       <DependentUpon>Notes.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Shedule\Classes.cs" />
+    <Compile Include="Forms\ToDo\AddTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ToDo\AddTask.Designer.cs">
+      <DependentUpon>AddTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ToDo\ToDoTask.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\Shedule\Schedule.cs">
@@ -133,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Shedule\Schedule.resx">
       <DependentUpon>Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ToDo\AddTask.resx">
+      <DependentUpon>AddTask.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ToDo\ToDo.resx">
       <DependentUpon>ToDo.cs</DependentUpon>
