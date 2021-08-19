@@ -15,10 +15,10 @@ namespace PROJECT_Studia {
 
         public ToDo(Home home) {
             InitializeComponent();
+            this.home = home;
             tasks = GetTasks();
             flowLayoutPanel1.AutoScroll = true;
             DrawButtons();
-            this.home = home;
         }
 
         private List<ToDoTask> GetTasks() {
@@ -35,10 +35,17 @@ namespace PROJECT_Studia {
 
             maxID = 0;
             while (queue.Read()) {
-                if (queue.GetInt32(3) != 2) {
+                if (queue.GetInt32(4) != 2) {
+                    int done;
+                    DateTime time = DateTime.Parse(queue.GetString(3));
+                    if (time < DateTime.Now) 
+                        done = 1;
+                    else
+                        done = 0;
+
                     result.Add(
                         new ToDoTask(
-                            queue.GetInt32(0), queue.GetString(1), DateTime.Parse(queue.GetString(2)), queue.GetInt32(3)
+                            queue.GetInt32(0), queue.GetString(1), queue.GetString(2), time, done
                        )
                     );
 
@@ -47,7 +54,7 @@ namespace PROJECT_Studia {
             }
             connection.Close();
             
-            result.Sort((x, y) => { return x.time.CompareTo(y.time); });
+            result.Sort((x, y) => { return x.Time.CompareTo(y.Time); });
             return result;
         }
 
@@ -55,8 +62,8 @@ namespace PROJECT_Studia {
             foreach (var task in tasks) {
                 //Task visuals
                 var button = new Button();
-                button.Text = task.name;
-                button.BackColor = task.done == 0 ? Color.Black : Color.Orange;
+                button.Text = task.Title;
+                button.BackColor = task.Done == 0 ? Color.Black : Color.Orange;
                 button.FlatStyle = FlatStyle.Flat;
                 button.Font = new Font(
                     "Century Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0
@@ -72,9 +79,7 @@ namespace PROJECT_Studia {
 
         private void Button_Click(object sender, EventArgs e) {
             ToDoTask task = (ToDoTask)((Button)sender).Tag;
-            Console.WriteLine(task.ID);
-            Console.WriteLine(task.time);
-            Console.WriteLine(task.name);
+            new TaskForm(task, connection, home).ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e) {

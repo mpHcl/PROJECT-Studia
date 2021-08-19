@@ -101,11 +101,15 @@ namespace PROJECT_Studia.Forms.ToDo {
             // 
             // richTextBox1
             // 
+            this.richTextBox1.BackColor = System.Drawing.Color.Black;
+            this.richTextBox1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.ForeColor = System.Drawing.Color.White;
             this.richTextBox1.Location = new System.Drawing.Point(22, 135);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(252, 102);
             this.richTextBox1.TabIndex = 12;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // AddTask
             // 

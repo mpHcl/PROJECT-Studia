@@ -42,6 +42,7 @@ namespace PROJECT_Studia {
             var createToDoTableSQL = "CREATE TABLE todo (" +
                                         "ID INT UNIQUE PRIMARY KEY," +
                                         "name TEXT," +
+                                        "description TEXT, " +
                                         "time time," +
                                         "done INT" +
                                         ")";

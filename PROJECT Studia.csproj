@@ -102,6 +102,12 @@
     <Compile Include="Forms\ToDo\AddTask.Designer.cs">
       <DependentUpon>AddTask.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ToDo\TaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ToDo\TaskForm.Designer.cs">
+      <DependentUpon>TaskForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ToDo\ToDoTask.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ToDo\AddTask.resx">
       <DependentUpon>AddTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ToDo\TaskForm.resx">
+      <DependentUpon>TaskForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ToDo\ToDo.resx">
       <DependentUpon>ToDo.cs</DependentUpon>

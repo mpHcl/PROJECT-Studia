@@ -54,8 +54,8 @@ namespace PROJECT_Studia.Forms.ToDo {
 
         private void button7_Click(object sender, EventArgs e) {
 
-            var querryText = $"INSERT INTO todo (ID, name, time, done) " +
-                             $"VALUES ({ID}, \"{textBox1.Text}\", \"{dateTimePicker1.Value}\", 0)";
+            var querryText = $"INSERT INTO todo (ID, name, description, time, done) " +
+                             $"VALUES ({ID}, \"{textBox1.Text}\",\"{richTextBox1.Text}\", \"{dateTimePicker1.Value}\", 0)";
             connection.Open();
             new SQLiteCommand(querryText, connection).ExecuteNonQuery();
             connection.Close();
@@ -65,6 +65,10 @@ namespace PROJECT_Studia.Forms.ToDo {
             todo.Visible = true;
             home.Panel.Controls.Clear();
             home.Panel.Controls.Add(todo);
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e) {
+
         }
     }
 }
