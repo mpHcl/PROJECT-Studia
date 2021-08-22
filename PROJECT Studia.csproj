@@ -95,7 +95,19 @@
     <Compile Include="Forms\Notes\Notes.Designer.cs">
       <DependentUpon>Notes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Shedule\Classes.cs" />
+    <Compile Include="Forms\Shedule\Activity.cs" />
+    <Compile Include="Forms\Shedule\EditSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Shedule\EditSchedule.Designer.cs">
+      <DependentUpon>EditSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Shedule\temp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Shedule\temp.Designer.cs">
+      <DependentUpon>temp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ToDo\AddTask.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,12 +123,6 @@
     <Compile Include="Forms\ToDo\ToDoTask.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Forms\Shedule\Schedule.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Shedule\Schedule.Designer.cs">
-      <DependentUpon>Schedule.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Settings\Settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,8 +150,11 @@
     <EmbeddedResource Include="Forms\Settings\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Shedule\Schedule.resx">
-      <DependentUpon>Schedule.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Shedule\EditSchedule.resx">
+      <DependentUpon>EditSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Shedule\temp.resx">
+      <DependentUpon>temp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ToDo\AddTask.resx">
       <DependentUpon>AddTask.cs</DependentUpon>

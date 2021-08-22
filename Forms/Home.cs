@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PROJECT_Studia.Forms.Shedule;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -70,11 +71,15 @@ namespace PROJECT_Studia {
             //person_id - id of lecturer
             var createScheduleTable = "CREATE TABLE schedule(" +
                                         "ID INT UNIQUE PRIMARY KEY," +
-                                        "title TEXT, " +
+                                        "title TEXT," +
+                                        "day TEXT, " +
                                         "start time," +
                                         "end time," +
                                         "room INT," +
                                         "person_id INT," +
+                                        "red INT," +
+                                        "green INT," +
+                                        "blue INT " +
                                         "FOREIGN KEY(person_id) REFERENCES lecturer(ID) " +
                                       ")";
             command = new SQLiteCommand(createScheduleTable, connection);
@@ -138,16 +143,7 @@ namespace PROJECT_Studia {
         }
 
         private void button1_Click(object sender, EventArgs e) {
-            var scheduleFrom = new Schedule();
-            scheduleFrom.TopLevel = false;
-            scheduleFrom.Visible = true;
-            flowLayoutPanel1.Visible = false;
-
-            flowLayoutPanel2.Controls.Clear();
-            flowLayoutPanel2.Controls.Add(scheduleFrom);
-            flowLayoutPanel2.Visible = true;
-
-            button7.Visible = true;
+            new EditSchedule().ShowDialog();
 
         }
 
