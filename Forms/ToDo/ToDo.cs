@@ -66,10 +66,10 @@ namespace PROJECT_Studia {
                 button.BackColor = task.Done == 0 ? Color.Black : Color.Orange;
                 button.FlatStyle = FlatStyle.Flat;
                 button.Font = new Font(
-                    "Century Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0
+                    "Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0
                 );
                 button.ForeColor = Color.White;
-                button.Size = new Size(195, 50);
+                button.Size = new Size(200, 33);
                 button.UseVisualStyleBackColor = false;
                 button.Tag = task;
                 button.Click += Button_Click;

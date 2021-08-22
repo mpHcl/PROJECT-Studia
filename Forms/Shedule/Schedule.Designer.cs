@@ -36,7 +36,7 @@ namespace PROJECT_Studia {
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(26, 12);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(225, 80);
+            this.button3.Size = new System.Drawing.Size(225, 70);
             this.button3.TabIndex = 10;
             this.button3.Text = "Open schedule";
             this.button3.UseVisualStyleBackColor = false;
@@ -50,7 +50,7 @@ namespace PROJECT_Studia {
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(26, 95);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(225, 80);
+            this.button1.Size = new System.Drawing.Size(225, 70);
             this.button1.TabIndex = 11;
             this.button1.Text = "Edit schedule";
             this.button1.UseVisualStyleBackColor = false;

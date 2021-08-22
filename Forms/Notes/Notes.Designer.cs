@@ -37,7 +37,7 @@ namespace PROJECT_Studia {
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(28, 95);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(225, 80);
+            this.button2.Size = new System.Drawing.Size(225, 70);
             this.button2.TabIndex = 1;
             this.button2.Text = "Browse notes";
             this.button2.UseVisualStyleBackColor = false;
@@ -51,7 +51,7 @@ namespace PROJECT_Studia {
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(28, 12);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(225, 80);
+            this.button3.Size = new System.Drawing.Size(225, 70);
             this.button3.TabIndex = 9;
             this.button3.Text = "Pin note";
             this.button3.UseVisualStyleBackColor = false;

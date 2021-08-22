@@ -26,9 +26,9 @@ namespace PROJECT_Studia.Forms.ToDo {
         }
 
         private void TaskForm_Load(object sender, EventArgs e) {
-            label1.Text = task.Title;
+            textBox1.Text = task.Title;
             label2.Text = task.Time.ToString();
-            label3.Text = task.Description;
+            richTextBox1.Text = task.Description;
             
         }
 
@@ -47,6 +47,41 @@ namespace PROJECT_Studia.Forms.ToDo {
             todo.Visible = true;
             home.Panel.Controls.Clear();
             home.Panel.Controls.Add(todo);
+        }
+
+        int x;
+        int y;
+        private bool firstClick = false;
+        private void panel1_MouseDown(object sender, MouseEventArgs e) {
+            if (e.Button == MouseButtons.Left) {
+                firstClick = true;
+                MoveTimer.Enabled = true;
+            }
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e) {
+            if (e.Button == MouseButtons.Left) {
+                MoveTimer.Enabled = false;
+            }
+        }
+
+        private void MoveTimer_Tick(object sender, EventArgs e) {
+            if (firstClick) {
+                firstClick = false;
+                x = Cursor.Position.X;
+                y = Cursor.Position.Y;
+            }
+            int deltax = x - Cursor.Position.X;
+            int deltay = y - Cursor.Position.Y;
+
+            this.Location = new Point(this.Location.X - deltax, this.Location.Y - deltay);
+
+            x = Cursor.Position.X;
+            y = Cursor.Position.Y;
+        }
+
+        private void label2_Click(object sender, EventArgs e) {
+
         }
     }
 }

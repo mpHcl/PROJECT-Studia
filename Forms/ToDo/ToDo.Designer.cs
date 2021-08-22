@@ -32,9 +32,9 @@ namespace PROJECT_Studia {
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(244, 12);
+            this.button1.Location = new System.Drawing.Point(243, 15);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(31, 32);
+            this.button1.Size = new System.Drawing.Size(33, 33);
             this.button1.TabIndex = 0;
             this.button1.Text = "+";
             this.button1.UseVisualStyleBackColor = true;
@@ -42,9 +42,9 @@ namespace PROJECT_Studia {
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(226, 196);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(224, 200);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // ToDo
