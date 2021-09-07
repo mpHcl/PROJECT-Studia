@@ -13,10 +13,14 @@ namespace PROJECT_Studia.Forms.Shedule {
         List<Activity> activities;
         public EditSchedule() {
             InitializeComponent();
+            initializeSchedule();
             for (int i = 6; i <= 20; i += 2) {
                 AddHour(i);
-                Console.WriteLine("-");
             }
+        }
+
+        public void initializeSchedule() {
+            
             activities = Activity.GetScheduleAsList();
             foreach (var activity in activities) {
                 Button activityButton = new Button();
@@ -27,6 +31,8 @@ namespace PROJECT_Studia.Forms.Shedule {
                 activityButton.Height = (activity.End.Hour - activity.Start.Hour) * 50 +
                    (int)(activity.End.Minute - activity.Start.Minute * 0.6);
                 activityButton.Location = new Point(0, (int)((((int)activity.Start.TimeOfDay.TotalSeconds - (int)new TimeSpan(6, 0, 0).TotalSeconds) / 3600.0) * 50) + 50);
+                activityButton.Click += openActivityButton;
+                activityButton.Tag = activity;
 
                 switch (activity.Day) {
                     case "Monday": MondayPanel.Controls.Add(activityButton); break;
@@ -38,6 +44,28 @@ namespace PROJECT_Studia.Forms.Shedule {
                     case "Sunday": SundayPanel.Controls.Add(activityButton); break;
                 }
             }
+        }
+
+        public void clearSchedule() {
+            MondayPanel.Controls.Clear();
+            TuesdayPanel.Controls.Clear();
+            WednesdayPanel.Controls.Clear();
+            ThursdayPanel.Controls.Clear();
+            FridayPanel.Controls.Clear();
+            SaturdayPanel.Controls.Clear();
+            SundayPanel.Controls.Clear();
+
+            MondayPanel.Controls.Add(label3);
+            TuesdayPanel.Controls.Add(label2);
+            WednesdayPanel.Controls.Add(label1);
+            ThursdayPanel.Controls.Add(label4);
+            FridayPanel.Controls.Add(label7);
+            SaturdayPanel.Controls.Add(label6);
+            SundayPanel.Controls.Add(label5);
+        }
+
+        private void openActivityButton(object sender, EventArgs e) {
+            new ActivityDetails((Activity)((Button)sender).Tag, this).ShowDialog();
         }
 
         private void EditSchedule_Load(object sender, EventArgs e) {
@@ -52,6 +80,7 @@ namespace PROJECT_Studia.Forms.Shedule {
             this.WindowState = FormWindowState.Minimized;
         }
 
+        
         int x;
         int y;
         private bool firstClick = false;
@@ -83,12 +112,8 @@ namespace PROJECT_Studia.Forms.Shedule {
             y = Cursor.Position.Y;
         }
 
-        private void label8_Click(object sender, EventArgs e) {
-
-        }
-
         private void button1_Click(object sender, EventArgs e) {
-            new temp(this, activities).Show();
+            new AddActivity(this, activities).Show();
         }
         private void AddHour(int hour) {
             Label hourLabel = new Label();

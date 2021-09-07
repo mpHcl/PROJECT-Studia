@@ -1,6 +1,6 @@
 ﻿
 namespace PROJECT_Studia.Forms.Shedule {
-    partial class temp {
+    partial class AddActivity {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -24,7 +24,6 @@ namespace PROJECT_Studia.Forms.Shedule {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.DayBox = new System.Windows.Forms.ComboBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -32,15 +31,9 @@ namespace PROJECT_Studia.Forms.Shedule {
             this.button1 = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(13, 124);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(181, 21);
-            this.comboBox2.TabIndex = 9;
             // 
             // DayBox
             // 
@@ -82,49 +75,69 @@ namespace PROJECT_Studia.Forms.Shedule {
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(183, 20);
             this.textBox1.TabIndex = 5;
+            this.textBox1.Text = "Title";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(43, 206);
+            this.button1.Location = new System.Drawing.Point(41, 167);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 40);
+            this.button1.Size = new System.Drawing.Size(126, 29);
             this.button1.TabIndex = 10;
-            this.button1.Text = "button1";
+            this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(43, 163);
+            this.button2.Location = new System.Drawing.Point(41, 132);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(126, 37);
+            this.button2.Size = new System.Drawing.Size(126, 29);
             this.button2.TabIndex = 11;
-            this.button2.Text = "button2";
+            this.button2.Text = "Change color";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // temp
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(10, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 16);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Start";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(10, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 16);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "End";
+            // 
+            // AddActivity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(213, 258);
+            this.ClientSize = new System.Drawing.Size(213, 218);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.DayBox);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox1);
-            this.Name = "temp";
-            this.Text = "temp";
+            this.Name = "AddActivity";
+            this.Text = "Add activity";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox DayBox;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -132,5 +145,7 @@ namespace PROJECT_Studia.Forms.Shedule {
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

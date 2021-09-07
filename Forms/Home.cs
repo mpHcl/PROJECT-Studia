@@ -50,18 +50,6 @@ namespace PROJECT_Studia {
             SQLiteCommand command = new SQLiteCommand(createToDoTableSQL, connection);
             command.ExecuteNonQuery();
 
-            //Lecturer
-            //ID - unique number(int)
-            //fname - First name
-            //lname - Last name
-            var createLecturerTable = "CREATE TABLE lecturer(" +
-                                        "ID INT UNIQUE PRIMARY KEY," +
-                                        "fname TEXT, " +
-                                        "lname TEXT" +
-                                      ")";
-            command = new SQLiteCommand(createLecturerTable, connection);
-            command.ExecuteNonQuery();
-
             //Schedule
             //ID - unique number (int)
             //title - name of class
@@ -80,7 +68,6 @@ namespace PROJECT_Studia {
                                         "red INT," +
                                         "green INT," +
                                         "blue INT " +
-                                        "FOREIGN KEY(person_id) REFERENCES lecturer(ID) " +
                                       ")";
             command = new SQLiteCommand(createScheduleTable, connection);
             command.ExecuteNonQuery();
@@ -109,37 +96,6 @@ namespace PROJECT_Studia {
 
         private void button6_Click(object sender, EventArgs e) {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        int x;
-        int y;
-        private bool firstClick = false;
-        private void panel1_MouseDown(object sender, MouseEventArgs e) {
-            if (e.Button == MouseButtons.Left) {
-                firstClick = true;
-                MoveTimer.Enabled = true;
-            }
-        }
-
-        private void panel1_MouseUp(object sender, MouseEventArgs e) {
-            if (e.Button == MouseButtons.Left) {
-                MoveTimer.Enabled = false;
-            }
-        }
-
-        private void MoveTimer_Tick(object sender, EventArgs e) {
-            if (firstClick) {
-                firstClick = false;
-                x = Cursor.Position.X;
-                y = Cursor.Position.Y;
-            }
-            int deltax = x - Cursor.Position.X;
-            int deltay = y - Cursor.Position.Y;
-
-            this.Location = new Point(this.Location.X - deltax, this.Location.Y - deltay);
-
-            x = Cursor.Position.X;
-            y = Cursor.Position.Y;
         }
 
         private void button1_Click(object sender, EventArgs e) {
@@ -208,6 +164,37 @@ namespace PROJECT_Studia {
 
         private void button6_MouseLeave(object sender, EventArgs e) {
             button6.BackColor = Color.Black;
+        }
+
+        int x;
+        int y;
+        private bool firstClick = false;
+        private void panel1_MouseDown(object sender, MouseEventArgs e) {
+            if (e.Button == MouseButtons.Left) {
+                firstClick = true;
+                MoveTimer.Enabled = true;
+            }
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e) {
+            if (e.Button == MouseButtons.Left) {
+                MoveTimer.Enabled = false;
+            }
+        }
+
+        private void MoveTimer_Tick(object sender, EventArgs e) {
+            if (firstClick) {
+                firstClick = false;
+                x = Cursor.Position.X;
+                y = Cursor.Position.Y;
+            }
+            int deltax = x - Cursor.Position.X;
+            int deltay = y - Cursor.Position.Y;
+
+            this.Location = new Point(this.Location.X - deltax, this.Location.Y - deltay);
+
+            x = Cursor.Position.X;
+            y = Cursor.Position.Y;
         }
     }
 }

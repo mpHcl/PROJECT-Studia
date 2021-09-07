@@ -11,7 +11,6 @@ namespace PROJECT_Studia.Forms.Shedule {
     public class Activity {       
         public int ID { get; set; }
         public string Title { get; set; }
-        //public Person Lecturer { get; set; }
 
         public DateTime Start { get; set; }
         public DateTime End { get; set; }
@@ -19,14 +18,6 @@ namespace PROJECT_Studia.Forms.Shedule {
         public Color Color { get; set; }
         public string Day { get; set; }
 
-        /*
-        public class Person {
-            public int ID { get; set; }
-            public string FirstName { get; set; }
-            public string LastName { get; set; }
-
-        }
-        */
         public static List<Activity> GetScheduleAsList() {
             List<Activity> result = new List<Activity>();
 
@@ -41,7 +32,7 @@ namespace PROJECT_Studia.Forms.Shedule {
             while (reader.Read()) {
                 result.Add(
                     new Activity() {
-                        ID = 0,
+                        ID = reader.GetInt32(0),
                         Color = Color.FromArgb(100, reader.GetInt32(7), reader.GetInt32(8), reader.GetInt32(9)),
                         Title = reader.GetString(1),
                         Start = DateTime.Parse(reader.GetString(2)),
@@ -49,9 +40,21 @@ namespace PROJECT_Studia.Forms.Shedule {
                         Day = reader.GetString(6)
                     }
                 );
+
+
             }
             connection.Close();
             return result;
+        }
+
+        public static void DeleteActivity(Activity activity) {
+            SQLiteConnection connection = new SQLiteConnection(
+                "URI = file:" + Directory.GetCurrentDirectory() + "\\data.db"
+            );
+            string command = $"DELETE FROM schedule WHERE ID = {activity.ID}";
+            connection.Open();
+            new SQLiteCommand(command, connection).ExecuteNonQuery();
+            connection.Close();
         }
 
         public void Save() {
