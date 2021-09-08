@@ -57,8 +57,29 @@ namespace PROJECT_Studia.Forms.Shedule {
             connection.Close();
         }
 
-        public void Save() {
+        public static void UpdateActivity(Activity activity) {
+            SQLiteConnection connection = new SQLiteConnection(
+                "URI = file:" + Directory.GetCurrentDirectory() + "\\data.db"
+            );
+            string command = $"UPDATE schedule " +
+                $"SET title=\"{activity.Title}\", start=\"{activity.Start}\", end=\"{activity.End}\", day=\"{activity.Day}\", " +
+                $"red=\"{activity.Color.R}\", blue=\"{activity.Color.B}\", green=\"{activity.Color.G}\" " +
+                $"WHERE ID = {activity.ID}";
+            connection.Open();
+            new SQLiteCommand(command, connection).ExecuteNonQuery();
+            connection.Close();
+        }
 
+        public static void Add(Activity activity) {
+            SQLiteConnection connection = new SQLiteConnection(
+                "URI = file:" + Directory.GetCurrentDirectory() + "\\data.db"
+            );
+            var command = $"INSERT INTO schedule(id, title, start, end, day, red, green, blue)" +
+                              $"VALUES (\'{activity.ID}\', \'{activity.Title}\', \'{activity.Start}\', " +
+                              $"\'{activity.End}\', \'{activity.Day}\', \'{activity.Color.R}\', \'{activity.Color.G}\', \'{activity.Color.B}\')";
+            connection.Open();
+            new SQLiteCommand(command, connection).ExecuteNonQuery();
+            connection.Close();
         }
     }
 }

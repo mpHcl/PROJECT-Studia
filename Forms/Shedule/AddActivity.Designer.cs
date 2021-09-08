@@ -82,7 +82,7 @@ namespace PROJECT_Studia.Forms.Shedule {
             this.button1.Location = new System.Drawing.Point(41, 167);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 29);
-            this.button1.TabIndex = 10;
+            this.button1.TabIndex = 11;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -92,7 +92,7 @@ namespace PROJECT_Studia.Forms.Shedule {
             this.button2.Location = new System.Drawing.Point(41, 132);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(126, 29);
-            this.button2.TabIndex = 11;
+            this.button2.TabIndex = 10;
             this.button2.Text = "Change color";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);

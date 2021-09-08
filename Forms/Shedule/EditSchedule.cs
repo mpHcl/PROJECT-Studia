@@ -27,10 +27,10 @@ namespace PROJECT_Studia.Forms.Shedule {
                 activityButton.FlatStyle = FlatStyle.Popup;
                 activityButton.BackColor = activity.Color;
                 activityButton.Text = activity.Title;
-                activityButton.Width = 190;
-                activityButton.Height = (activity.End.Hour - activity.Start.Hour) * 50 +
+                activityButton.Width = 110;
+                activityButton.Height = (activity.End.Hour - activity.Start.Hour) * 25 +
                    (int)(activity.End.Minute - activity.Start.Minute * 0.6);
-                activityButton.Location = new Point(0, (int)((((int)activity.Start.TimeOfDay.TotalSeconds - (int)new TimeSpan(6, 0, 0).TotalSeconds) / 3600.0) * 50) + 50);
+                activityButton.Location = new Point(0, (int)((((int)activity.Start.TimeOfDay.TotalSeconds - (int)new TimeSpan(6, 0, 0).TotalSeconds) / 3600.0) * 25) + 50);
                 activityButton.Click += openActivityButton;
                 activityButton.Tag = activity;
 
@@ -122,7 +122,7 @@ namespace PROJECT_Studia.Forms.Shedule {
             hourLabel.Width = 40;
             hourLabel.TextAlign = ContentAlignment.MiddleCenter;
             hourLabel.Text = $"{hour}:00";
-            hourLabel.Location = new Point(0, (hour - 5) * 50);
+            hourLabel.Location = new Point(0, (hour - 4) * 25);
             
 
             panel2.Controls.Add(hourLabel);

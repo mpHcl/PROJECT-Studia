@@ -76,13 +76,13 @@ namespace PROJECT_Studia.Forms.Shedule {
             // 
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 7;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 215F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 107F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 770F));
             this.tableLayoutPanel1.Controls.Add(this.FridayPanel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.SaturdayPanel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.SundayPanel, 0, 0);
@@ -95,15 +95,15 @@ namespace PROJECT_Studia.Forms.Shedule {
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1420, 822);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(768, 427);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // FridayPanel
             // 
             this.FridayPanel.Controls.Add(this.label7);
-            this.FridayPanel.Location = new System.Drawing.Point(808, 4);
+            this.FridayPanel.Location = new System.Drawing.Point(443, 4);
             this.FridayPanel.Name = "FridayPanel";
-            this.FridayPanel.Size = new System.Drawing.Size(194, 800);
+            this.FridayPanel.Size = new System.Drawing.Size(104, 400);
             this.FridayPanel.TabIndex = 13;
             // 
             // label7
@@ -113,7 +113,7 @@ namespace PROJECT_Studia.Forms.Shedule {
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(1, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(190, 50);
+            this.label7.Size = new System.Drawing.Size(103, 50);
             this.label7.TabIndex = 2;
             this.label7.Text = "Friday";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -121,9 +121,9 @@ namespace PROJECT_Studia.Forms.Shedule {
             // SaturdayPanel
             // 
             this.SaturdayPanel.Controls.Add(this.label6);
-            this.SaturdayPanel.Location = new System.Drawing.Point(1009, 4);
+            this.SaturdayPanel.Location = new System.Drawing.Point(554, 4);
             this.SaturdayPanel.Name = "SaturdayPanel";
-            this.SaturdayPanel.Size = new System.Drawing.Size(194, 800);
+            this.SaturdayPanel.Size = new System.Drawing.Size(96, 400);
             this.SaturdayPanel.TabIndex = 12;
             // 
             // label6
@@ -133,7 +133,7 @@ namespace PROJECT_Studia.Forms.Shedule {
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(1, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(190, 50);
+            this.label6.Size = new System.Drawing.Size(95, 50);
             this.label6.TabIndex = 2;
             this.label6.Text = "Saturday";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -141,9 +141,9 @@ namespace PROJECT_Studia.Forms.Shedule {
             // SundayPanel
             // 
             this.SundayPanel.Controls.Add(this.label5);
-            this.SundayPanel.Location = new System.Drawing.Point(1210, 4);
+            this.SundayPanel.Location = new System.Drawing.Point(657, 4);
             this.SundayPanel.Name = "SundayPanel";
-            this.SundayPanel.Size = new System.Drawing.Size(206, 800);
+            this.SundayPanel.Size = new System.Drawing.Size(109, 400);
             this.SundayPanel.TabIndex = 11;
             // 
             // label5
@@ -153,7 +153,7 @@ namespace PROJECT_Studia.Forms.Shedule {
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(1, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(202, 50);
+            this.label5.Size = new System.Drawing.Size(108, 50);
             this.label5.TabIndex = 2;
             this.label5.Text = "Sunday";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -161,9 +161,9 @@ namespace PROJECT_Studia.Forms.Shedule {
             // ThursdayPanel
             // 
             this.ThursdayPanel.Controls.Add(this.label4);
-            this.ThursdayPanel.Location = new System.Drawing.Point(607, 4);
+            this.ThursdayPanel.Location = new System.Drawing.Point(333, 4);
             this.ThursdayPanel.Name = "ThursdayPanel";
-            this.ThursdayPanel.Size = new System.Drawing.Size(194, 800);
+            this.ThursdayPanel.Size = new System.Drawing.Size(103, 400);
             this.ThursdayPanel.TabIndex = 10;
             // 
             // label4
@@ -173,7 +173,7 @@ namespace PROJECT_Studia.Forms.Shedule {
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(1, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(190, 50);
+            this.label4.Size = new System.Drawing.Size(102, 50);
             this.label4.TabIndex = 2;
             this.label4.Text = "Thursday";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -183,7 +183,7 @@ namespace PROJECT_Studia.Forms.Shedule {
             this.MondayPanel.Controls.Add(this.label3);
             this.MondayPanel.Location = new System.Drawing.Point(4, 4);
             this.MondayPanel.Name = "MondayPanel";
-            this.MondayPanel.Size = new System.Drawing.Size(194, 800);
+            this.MondayPanel.Size = new System.Drawing.Size(101, 400);
             this.MondayPanel.TabIndex = 9;
             // 
             // label3
@@ -193,7 +193,7 @@ namespace PROJECT_Studia.Forms.Shedule {
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(1, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(190, 50);
+            this.label3.Size = new System.Drawing.Size(100, 50);
             this.label3.TabIndex = 2;
             this.label3.Text = "Monday";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -201,9 +201,9 @@ namespace PROJECT_Studia.Forms.Shedule {
             // TuesdayPanel
             // 
             this.TuesdayPanel.Controls.Add(this.label2);
-            this.TuesdayPanel.Location = new System.Drawing.Point(205, 4);
+            this.TuesdayPanel.Location = new System.Drawing.Point(112, 4);
             this.TuesdayPanel.Name = "TuesdayPanel";
-            this.TuesdayPanel.Size = new System.Drawing.Size(194, 800);
+            this.TuesdayPanel.Size = new System.Drawing.Size(103, 400);
             this.TuesdayPanel.TabIndex = 8;
             // 
             // label2
@@ -213,7 +213,7 @@ namespace PROJECT_Studia.Forms.Shedule {
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(1, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(190, 50);
+            this.label2.Size = new System.Drawing.Size(102, 50);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tuesday";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -221,19 +221,19 @@ namespace PROJECT_Studia.Forms.Shedule {
             // WednesdayPanel
             // 
             this.WednesdayPanel.Controls.Add(this.label1);
-            this.WednesdayPanel.Location = new System.Drawing.Point(406, 4);
+            this.WednesdayPanel.Location = new System.Drawing.Point(222, 4);
             this.WednesdayPanel.Name = "WednesdayPanel";
-            this.WednesdayPanel.Size = new System.Drawing.Size(194, 800);
+            this.WednesdayPanel.Size = new System.Drawing.Size(104, 400);
             this.WednesdayPanel.TabIndex = 7;
             // 
             // label1
             // 
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 50);
+            this.label1.Size = new System.Drawing.Size(103, 50);
             this.label1.TabIndex = 2;
             this.label1.Text = "Wednesday";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -254,7 +254,7 @@ namespace PROJECT_Studia.Forms.Shedule {
             // 
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.button6.Location = new System.Drawing.Point(1509, 0);
+            this.button6.Location = new System.Drawing.Point(857, -2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(30, 26);
             this.button6.TabIndex = 4;
@@ -266,7 +266,7 @@ namespace PROJECT_Studia.Forms.Shedule {
             // 
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.button7.Location = new System.Drawing.Point(1540, 0);
+            this.button7.Location = new System.Drawing.Point(887, -2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(30, 26);
             this.button7.TabIndex = 5;
@@ -291,14 +291,14 @@ namespace PROJECT_Studia.Forms.Shedule {
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1482, 830);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(830, 435);
             this.tableLayoutPanel2.TabIndex = 9;
             // 
             // panel2
             // 
             this.panel2.Location = new System.Drawing.Point(4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(44, 800);
+            this.panel2.Size = new System.Drawing.Size(44, 416);
             this.panel2.TabIndex = 6;
             // 
             // EditSchedule
@@ -306,7 +306,7 @@ namespace PROJECT_Studia.Forms.Shedule {
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1570, 903);
+            this.ClientSize = new System.Drawing.Size(920, 503);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);

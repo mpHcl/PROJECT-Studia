@@ -40,16 +40,11 @@ namespace PROJECT_Studia.Forms.Shedule {
             };
             
             activities.Add(activity);
-            activity.Save();
-            var color = colorDialog1.Color;
+            
+            activity.ID = max + 1;
+            activity.Color = colorDialog1.Color;
 
-            var commandText = $"INSERT INTO schedule(id, title, start, end, day, red, green, blue)" +
-                              $"VALUES (\'{max + 1}\', \'{activity.Title}\', \'{activity.Start}\', " +
-                              $"\'{activity.End}\', \'{activity.Day}\', \'{color.R}\', \'{color.G}\', \'{color.B}\')";
-            connection.Open();
-            SQLiteCommand command = new SQLiteCommand(commandText, connection);
-            command.ExecuteNonQuery();
-            connection.Close();
+            Activity.Add(activity);
 
             schedule.clearSchedule();
             schedule.initializeSchedule();
