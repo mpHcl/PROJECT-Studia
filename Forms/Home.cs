@@ -90,20 +90,20 @@ namespace PROJECT_Studia {
             label1.Text = $"{hour}:{minute}:{second}";
         }
 
-        private void button5_Click(object sender, EventArgs e) {
-            this.Close();
+        private void ExitButtonClick(object sender, EventArgs e) {
+            Close();
         }
 
-        private void button6_Click(object sender, EventArgs e) {
-            this.WindowState = FormWindowState.Minimized;
+        private void MinimizeButtonClick(object sender, EventArgs e) {
+            WindowState = FormWindowState.Minimized;
         }
 
-        private void button1_Click(object sender, EventArgs e) {
+        private void ScheduleButtonClick(object sender, EventArgs e) {
             new EditSchedule().ShowDialog();
 
         }
 
-        private void button2_Click(object sender, EventArgs e) {
+        private void NotesButtonClick(object sender, EventArgs e) {
             var noteFrom = new Notes(this);
             noteFrom.TopLevel = false;
             noteFrom.Visible = true;
@@ -118,7 +118,7 @@ namespace PROJECT_Studia {
 
         }
 
-        private void button4_Click(object sender, EventArgs e) {
+        private void ToDoButtonClick(object sender, EventArgs e) {
             var todoFrom = new ToDo(this);
             todoFrom.TopLevel = false;
             todoFrom.Visible = true;
@@ -131,38 +131,25 @@ namespace PROJECT_Studia {
             button7.Visible = true;
         }
 
-        private void button3_Click(object sender, EventArgs e) {
-            var settingsFrom = new Settings();
-            settingsFrom.TopLevel = false;
-            settingsFrom.Visible = true;
-            flowLayoutPanel1.Visible = false;
-
-            flowLayoutPanel2.Controls.Clear();
-            flowLayoutPanel2.Controls.Add(settingsFrom);
-            flowLayoutPanel2.Visible = true;
-
-            button7.Visible = true;
-        }
-
-        private void button7_Click(object sender, EventArgs e) {
+        private void HomeButtonClick(object sender, EventArgs e) {
             flowLayoutPanel2.Visible = false;
             flowLayoutPanel1.Visible = true;
             button7.Visible = false;
         }
 
-        private void button5_MouseHover(object sender, EventArgs e) {
+        private void ExitButtonMouseHover(object sender, EventArgs e) {
             button5.BackColor = Color.Gray;
         }
 
-        private void button5_MouseLeave(object sender, EventArgs e) {
+        private void ExitButtonMouseLeave(object sender, EventArgs e) {
             button5.BackColor = Color.Black;
         }
 
-        private void button6_MouseHover(object sender, EventArgs e) {
+        private void MinimizeButtonMouseHover(object sender, EventArgs e) {
             button6.BackColor = Color.Gray;
         }
 
-        private void button6_MouseLeave(object sender, EventArgs e) {
+        private void MinimizeButtonMouseLeave(object sender, EventArgs e) {
             button6.BackColor = Color.Black;
         }
 

@@ -20,16 +20,17 @@ namespace PROJECT_Studia.Forms.Shedule {
             dateTimePicker2.Value = activity.End;
             schedule = editSchedule;
             this.activity = activity;
+            button4.BackColor = activity.Color;
         }
 
-        private void button1_Click(object sender, EventArgs e) {
+        private void DeleteButtonClick(object sender, EventArgs e) {
             Activity.DeleteActivity(activity);
             schedule.clearSchedule();
             schedule.initializeSchedule();
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e) {
+        private void SaveButtonClick(object sender, EventArgs e) {
             activity.Title = textBox1.Text;
             activity.Start = dateTimePicker1.Value;
             activity.End = dateTimePicker2.Value;
@@ -40,11 +41,7 @@ namespace PROJECT_Studia.Forms.Shedule {
             schedule.initializeSchedule();
         }
 
-        private void DayBox_SelectedIndexChanged(object sender, EventArgs e) {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e) {
+        private void ColorPickClick(object sender, EventArgs e) {
             colorDialog1.ShowDialog();
         }
     }

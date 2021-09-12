@@ -11,14 +11,12 @@ namespace PROJECT_Studia.Forms.Shedule {
     public class Activity {       
         public int ID { get; set; }
         public string Title { get; set; }
-
         public DateTime Start { get; set; }
         public DateTime End { get; set; }
-
         public Color Color { get; set; }
         public string Day { get; set; }
 
-        public static List<Activity> GetScheduleAsList() {
+        public static List<Activity> GetActivities() {
             List<Activity> result = new List<Activity>();
 
             SQLiteConnection connection = new SQLiteConnection(
@@ -47,11 +45,13 @@ namespace PROJECT_Studia.Forms.Shedule {
             return result;
         }
 
-        public static void DeleteActivity(Activity activity) {
+        public static void CreateActivity(Activity activity) {
             SQLiteConnection connection = new SQLiteConnection(
                 "URI = file:" + Directory.GetCurrentDirectory() + "\\data.db"
             );
-            string command = $"DELETE FROM schedule WHERE ID = {activity.ID}";
+            var command = $"INSERT INTO schedule(id, title, start, end, day, red, green, blue)" +
+                              $"VALUES (\'{activity.ID}\', \'{activity.Title}\', \'{activity.Start}\', " +
+                              $"\'{activity.End}\', \'{activity.Day}\', \'{activity.Color.R}\', \'{activity.Color.G}\', \'{activity.Color.B}\')";
             connection.Open();
             new SQLiteCommand(command, connection).ExecuteNonQuery();
             connection.Close();
@@ -70,13 +70,11 @@ namespace PROJECT_Studia.Forms.Shedule {
             connection.Close();
         }
 
-        public static void Add(Activity activity) {
+        public static void DeleteActivity(Activity activity) {
             SQLiteConnection connection = new SQLiteConnection(
                 "URI = file:" + Directory.GetCurrentDirectory() + "\\data.db"
             );
-            var command = $"INSERT INTO schedule(id, title, start, end, day, red, green, blue)" +
-                              $"VALUES (\'{activity.ID}\', \'{activity.Title}\', \'{activity.Start}\', " +
-                              $"\'{activity.End}\', \'{activity.Day}\', \'{activity.Color.R}\', \'{activity.Color.G}\', \'{activity.Color.B}\')";
+            string command = $"DELETE FROM schedule WHERE ID = {activity.ID}";
             connection.Open();
             new SQLiteCommand(command, connection).ExecuteNonQuery();
             connection.Close();

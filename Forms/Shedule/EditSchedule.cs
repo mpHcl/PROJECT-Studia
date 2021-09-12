@@ -21,7 +21,7 @@ namespace PROJECT_Studia.Forms.Shedule {
 
         public void initializeSchedule() {
             
-            activities = Activity.GetScheduleAsList();
+            activities = Activity.GetActivities();
             foreach (var activity in activities) {
                 Button activityButton = new Button();
                 activityButton.FlatStyle = FlatStyle.Popup;

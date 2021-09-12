@@ -14,17 +14,13 @@ namespace PROJECT_Studia.Forms.Shedule {
     public partial class AddActivity : Form {
         EditSchedule schedule;
         List<Activity> activities;
-        SQLiteConnection connection;
         public AddActivity(EditSchedule schedule, List<Activity> activities) {
             InitializeComponent();
             this.schedule = schedule;
-            connection = new SQLiteConnection(
-                "URI = file:" + Directory.GetCurrentDirectory() + "\\data.db"
-            );
             this.activities = activities;
         }
 
-        private void button1_Click(object sender, EventArgs e) {
+        private void AddButtonClick(object sender, EventArgs e) {
             int max = 0;
             foreach (var item in activities) {
                 if (item.ID > max) {
@@ -44,13 +40,13 @@ namespace PROJECT_Studia.Forms.Shedule {
             activity.ID = max + 1;
             activity.Color = colorDialog1.Color;
 
-            Activity.Add(activity);
+            Activity.CreateActivity(activity);
 
             schedule.clearSchedule();
             schedule.initializeSchedule();
         }
 
-        private void button2_Click(object sender, EventArgs e) {
+        private void ColorPickerButtonClick(object sender, EventArgs e) {
             colorDialog1.ShowDialog();
         }
 

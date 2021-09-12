@@ -84,7 +84,7 @@ namespace PROJECT_Studia.Forms.Shedule {
             this.button1.TabIndex = 4;
             this.button1.Text = "Delete";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.DeleteButtonClick);
             // 
             // button2
             // 
@@ -94,7 +94,7 @@ namespace PROJECT_Studia.Forms.Shedule {
             this.button2.TabIndex = 5;
             this.button2.Text = "Save";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.SaveButtonClick);
             // 
             // textBox1
             // 
@@ -145,7 +145,7 @@ namespace PROJECT_Studia.Forms.Shedule {
             this.button3.TabIndex = 10;
             this.button3.Text = "Change";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.ColorPickClick);
             // 
             // label5
             // 
@@ -158,11 +158,12 @@ namespace PROJECT_Studia.Forms.Shedule {
             // 
             // button4
             // 
+            this.button4.Enabled = false;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Location = new System.Drawing.Point(91, 127);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(32, 23);
             this.button4.TabIndex = 12;
-            this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // ActivityDetails
