@@ -25,7 +25,7 @@ namespace PROJECT_Studia {
             List<ToDoTask> result = new List<ToDoTask>();
 
             connection = new SQLiteConnection(
-                "URI = file:" + Directory.GetCurrentDirectory() + "\\data.db"
+                    "URI = file:" + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\MICHSON CORP\PROJECT Studia\Data\data.db"
             );
             string commandText = "SELECT * FROM todo";
             

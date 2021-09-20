@@ -20,7 +20,7 @@ namespace PROJECT_Studia.Forms.Shedule {
             List<Activity> result = new List<Activity>();
 
             SQLiteConnection connection = new SQLiteConnection(
-                "URI = file:" + Directory.GetCurrentDirectory() + "\\data.db"
+                "URI = file:" + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\MICHSON CORP\PROJECT Studia\Data\data.db"
             );
             string command = "SELECT * FROM schedule;";
             connection.Open();
@@ -47,7 +47,7 @@ namespace PROJECT_Studia.Forms.Shedule {
 
         public static void CreateActivity(Activity activity) {
             SQLiteConnection connection = new SQLiteConnection(
-                "URI = file:" + Directory.GetCurrentDirectory() + "\\data.db"
+                "URI = file:" + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"MICHSON CORP\PROJECT Studia\Data\data.db"
             );
             var command = $"INSERT INTO schedule(id, title, start, end, day, red, green, blue)" +
                               $"VALUES (\'{activity.ID}\', \'{activity.Title}\', \'{activity.Start}\', " +
@@ -59,7 +59,7 @@ namespace PROJECT_Studia.Forms.Shedule {
 
         public static void UpdateActivity(Activity activity) {
             SQLiteConnection connection = new SQLiteConnection(
-                "URI = file:" + Directory.GetCurrentDirectory() + "\\data.db"
+                "URI = file:" + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"MICHSON CORP\PROJECT Studia\Data\data.db"
             );
             string command = $"UPDATE schedule " +
                 $"SET title=\"{activity.Title}\", start=\"{activity.Start}\", end=\"{activity.End}\", day=\"{activity.Day}\", " +
@@ -72,7 +72,7 @@ namespace PROJECT_Studia.Forms.Shedule {
 
         public static void DeleteActivity(Activity activity) {
             SQLiteConnection connection = new SQLiteConnection(
-                "URI = file:" + Directory.GetCurrentDirectory() + "\\data.db"
+                "URI = file:" + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"MICHSON CORP\PROJECT Studia\Data\data.db"
             );
             string command = $"DELETE FROM schedule WHERE ID = {activity.ID}";
             connection.Open();

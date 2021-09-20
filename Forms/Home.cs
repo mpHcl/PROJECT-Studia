@@ -10,19 +10,21 @@ namespace PROJECT_Studia {
         public FlowLayoutPanel Panel { get; set; }
         public Home() {
             InitializeComponent();
-            label4.Text = Directory.GetCurrentDirectory();
 
             flowLayoutPanel2.Visible = false;
             button7.Visible = false;
             this.Panel = flowLayoutPanel2;
 
+
+            //Use this without installed app
+            /*
             string path = Directory.GetCurrentDirectory() + "\\data.db";
             if (!File.Exists(path)) {
                 var file = File.Create(path);
                 file.Close();
                 CreateTables(path);
             }
-            
+            */
 
         }
 

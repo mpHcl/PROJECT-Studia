@@ -21,6 +21,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_07C57A1886EF4FC3B568C69DBC778E56"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_08AC976B524EB69F75648F049B6A4EEA"
         "OwnerKey" = "8:_7A6BBFF4219D4E1CB3D1BEA693AF87E7"
         "MsmSig" = "8:_UNDEFINED"
@@ -257,6 +263,12 @@
         {
         "MsmKey" = "8:_5A01A70654D55E5A78B318BD7C124DC3"
         "OwnerKey" = "8:_7A6BBFF4219D4E1CB3D1BEA693AF87E7"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5B3CD6774C96433BB5B809F1CCF0EACB"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -677,12 +689,6 @@
         {
         "MsmKey" = "8:_D25E5EE685BDF7342DB37F4789F23717"
         "OwnerKey" = "8:_7A6BBFF4219D4E1CB3D1BEA693AF87E7"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D4E1BD3A0090402E8F956BDF8606B865"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1643,6 +1649,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_07C57A1886EF4FC3B568C69DBC778E56"
+            {
+            "SourcePath" = "8:..\\bin\\Release\\data.db"
+            "TargetName" = "8:data.db"
+            "Tag" = "8:"
+            "Folder" = "8:_019A3C04FC8E4545B0112BA8D6848EB3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_08AC976B524EB69F75648F049B6A4EEA"
@@ -2872,6 +2898,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5B3CD6774C96433BB5B809F1CCF0EACB"
+            {
+            "SourcePath" = "8:..\\test.txt"
+            "TargetName" = "8:test.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_17DFE5FD8EFE474BB2A6384271423D54"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5B3E5966DE6820ABFB87881D850DBB1C"
@@ -4639,26 +4685,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D4E1BD3A0090402E8F956BDF8606B865"
-            {
-            "SourcePath" = "8:..\\test.txt"
-            "TargetName" = "8:test.txt"
-            "Tag" = "8:"
-            "Folder" = "8:_17DFE5FD8EFE474BB2A6384271423D54"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D636F400C4F4A8BDC05DD1313F7C5512"
             {
             "AssemblyRegister" = "3:1"
@@ -5378,6 +5404,50 @@
         }
         "Folder"
         {
+            "{1525181F-901A-416C-8A58-119130FE478E}:_3B09AAE3D100401FBFC88A4523A20E88"
+            {
+            "Name" = "8:#1915"
+            "AlwaysCreate" = "11:FALSE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Property" = "8:AppDataFolder"
+                "Folders"
+                {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_CAD3218C1A6346DBA43D12292E49E3A2"
+                    {
+                    "Name" = "8:MICHSON CORP"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_921398787ADA4865A634242FDD6B5BD5"
+                        "Folders"
+                        {
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_52504691205B4A919B46C83012F28EA0"
+                            {
+                            "Name" = "8:PROJECT Studia"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_EFC4BBB178D84192A93DFC3345D8B1E9"
+                                "Folders"
+                                {
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_019A3C04FC8E4545B0112BA8D6848EB3"
+                                    {
+                                    "Name" = "8:Data"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "Condition" = "8:"
+                                    "Transitive" = "11:FALSE"
+                                    "Property" = "8:_87B6A2CF462B4A80A996486E94B01E9D"
+                                        "Folders"
+                                        {
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             "{1525181F-901A-416C-8A58-119130FE478E}:_6D9FBF91B50B4D1A8D3C733F18774917"
             {
             "Name" = "8:#1916"
@@ -5473,7 +5543,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Installer"
         "ProductCode" = "8:{83280FF3-7E15-468D-9C91-3C51635E29AF}"
-        "PackageCode" = "8:{FF437832-3F66-4912-AE8E-346952DCAE5E}"
+        "PackageCode" = "8:{67449BD9-6822-4BAD-B99D-B141832F6501}"
         "UpgradeCode" = "8:{AAE364A1-3881-4EE2-990E-3E514583DD27}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
