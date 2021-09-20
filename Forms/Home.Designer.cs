@@ -25,6 +25,7 @@ namespace PROJECT_Studia {
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.label1 = new System.Windows.Forms.Label();
             this.TimeTimer = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
@@ -39,6 +40,7 @@ namespace PROJECT_Studia {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.button7 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -88,7 +90,7 @@ namespace PROJECT_Studia {
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(3, 109);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(275, 100);
+            this.button1.Size = new System.Drawing.Size(281, 100);
             this.button1.TabIndex = 1;
             this.button1.Text = "Schedule";
             this.button1.UseVisualStyleBackColor = false;
@@ -116,7 +118,7 @@ namespace PROJECT_Studia {
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Location = new System.Drawing.Point(145, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(133, 100);
+            this.button4.Size = new System.Drawing.Size(139, 100);
             this.button4.TabIndex = 2;
             this.button4.Text = "To do ";
             this.button4.UseVisualStyleBackColor = false;
@@ -179,7 +181,7 @@ namespace PROJECT_Studia {
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(11, 186);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(12, 181);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(280, 223);
             this.flowLayoutPanel2.TabIndex = 9;
@@ -196,12 +198,22 @@ namespace PROJECT_Studia {
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.HomeButtonClick);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "label4";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(298, 446);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -211,12 +223,14 @@ namespace PROJECT_Studia {
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Home";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -236,6 +250,7 @@ namespace PROJECT_Studia {
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label4;
     }
 }
 

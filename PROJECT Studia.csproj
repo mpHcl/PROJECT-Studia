@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Data.Sqlite, Version=5.0.8.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Data.Sqlite.Core.5.0.8\lib\netstandard2.0\Microsoft.Data.Sqlite.dll</HintPath>
@@ -76,12 +79,6 @@
     </Compile>
     <Compile Include="Forms\Notes\BrowseNotes.Designer.cs">
       <DependentUpon>BrowseNotes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Notes\CreateNoteMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Notes\CreateNoteMenu.Designer.cs">
-      <DependentUpon>CreateNoteMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Home.cs">
       <SubType>Form</SubType>
@@ -138,9 +135,6 @@
     <EmbeddedResource Include="Forms\Notes\BrowseNotes.resx">
       <DependentUpon>BrowseNotes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Notes\CreateNoteMenu.resx">
-      <DependentUpon>CreateNoteMenu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,7 +182,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <Content Include="o.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.114.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.114.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

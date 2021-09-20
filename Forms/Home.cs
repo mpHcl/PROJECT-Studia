@@ -1,14 +1,8 @@
 ﻿using PROJECT_Studia.Forms.Shedule;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PROJECT_Studia {
@@ -16,6 +10,8 @@ namespace PROJECT_Studia {
         public FlowLayoutPanel Panel { get; set; }
         public Home() {
             InitializeComponent();
+            label4.Text = Directory.GetCurrentDirectory();
+
             flowLayoutPanel2.Visible = false;
             button7.Visible = false;
             this.Panel = flowLayoutPanel2;

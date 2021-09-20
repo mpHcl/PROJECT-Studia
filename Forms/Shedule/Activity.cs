@@ -33,12 +33,12 @@ namespace PROJECT_Studia.Forms.Shedule {
                         ID = reader.GetInt32(0),
                         Color = Color.FromArgb(100, reader.GetInt32(7), reader.GetInt32(8), reader.GetInt32(9)),
                         Title = reader.GetString(1),
-                        Start = DateTime.Parse(reader.GetString(2)),
-                        End = DateTime.Parse(reader.GetString(3)),
-                        Day = reader.GetString(6)
+                        Start = DateTime.Parse(reader.GetString(3)),
+                        End = DateTime.Parse(reader.GetString(4)),
+                        Day = reader.GetString(2)
                     }
                 );
-
+               
 
             }
             connection.Close();
